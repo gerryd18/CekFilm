@@ -16,3 +16,8 @@ export const searchMovie = async(q) => {
     // console.log({list : search});
     return search.data.results 
 } 
+
+export const getMovieDetail = async(q)=>{
+  const search = await axios.get(`${baseUrl}/movie/${q}?language=en-US&api_key=${apiKey}`);
+  return search.data
+}
