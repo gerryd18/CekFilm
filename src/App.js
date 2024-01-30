@@ -12,7 +12,6 @@ const App = () => {
   useEffect(() => {
     getMovieList().then((result) => {
       setPopularMovies(result);
-      console.log(result); 
     });
   }, []);
 
