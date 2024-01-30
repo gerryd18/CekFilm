@@ -1,25 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {Star} from "lucide-react";
 
 const PopularMovieList = ({ popularMovies }) => {
-  
   return (
     <>
       {popularMovies.map((movie, i) => (
         <Link to={`/detail?movie=${movie.id}`} key={movie.id}>
-          <div
-            key={i}
-            className="bg-slate-200 p-3 mx-auto mb-2rem rounded-xl w-[20rem] lg:w-[20rem] h-[600px]"
-          >
-            <div className="w-full mb-5 text-xl text-center">{movie.title}</div>
+          <div className="relative rounded-xl overflow-hidden bg-blend-darken">
             <img
-              className="w-full"
               src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
               alt=""
+              className="w-full"
             />
-            <div className="text-center mt-2 text-lg">{movie.release_date}</div>
-            <div className="text-center mt-2 text-yellow-700 font-bold">
-              {movie.vote_average}
+
+            {/* Use Tailwind CSS hover utilities */}
+            <div className="absolute top-0 bottom-0 left-0 right-0 bg-slate-600/50 opacity-0 flex items-center justify-center transition-all duration-300 hover:opacity-100">
+              <h1 className="text-2xl text-white">testing</h1>
             </div>
           </div>
         </Link>

@@ -19,8 +19,11 @@ const Home = () => {
   useEffect(() => {
     let type = new URLSearchParams(location.search).get("type");
     console.log("type = " + type);
-    if(type == null){
 
+    if(type == null){
+      getMovieList().then((result) => {
+        setPopularMovies(result);
+      });
     }else if(type === "nowPlaying"){
         nowPlayingMovie().then((result) => {
           setPopularMovies(result);
@@ -34,10 +37,6 @@ const Home = () => {
           setPopularMovies(result);
         });
     }
-
-    // getMovieList().then((result) => {
-    //   setPopularMovies(result);
-    // });
   }, [location]);
 
   const handleSearchButtonClick = async () => {
@@ -54,7 +53,7 @@ const Home = () => {
         setSearchQuery={setSearchQuery}
         onSearchButtonClick={handleSearchButtonClick}
       />
-      <div className="container items-center mx-auto grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2  gap-y-12">
+      <div className="container items-center mx-auto grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2  gap-y-12 gap-x-8 rounded-xl overflow-hidden">
         <PopularMovieList popularMovies={popularMovies} />
       </div>
     </div>
