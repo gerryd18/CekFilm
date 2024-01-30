@@ -53,7 +53,7 @@ const Home = () => {
         setSearchQuery={setSearchQuery}
         onSearchButtonClick={handleSearchButtonClick}
       />
-      <div className="container items-center mx-auto grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2  gap-y-12 gap-x-8 rounded-xl overflow-hidden">
+      <div className="container items-center mx-auto grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2  gap-y-12 gap-x-8 rounded-xl overflow-hidden p-5">
         <PopularMovieList popularMovies={popularMovies} />
       </div>
     </div>
