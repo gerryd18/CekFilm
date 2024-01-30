@@ -1,9 +1,16 @@
-import React from 'react'
-import Button from './Button';
+import React from "react";
+import Button from "./Button";
 
 const SearchBar = ({ searchQuery, setSearchQuery, onSearchButtonClick }) => {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent form submission
+      onSearchButtonClick();
+    }
+  };
+
   return (
-    <div className="container mx-auto  mb-12 flex flex-col items-center justify-center gap-y-2 py-[2rem]">
+    <div className="container mx-auto mb-12 flex flex-col items-center justify-center gap-y-2 py-[2rem]">
       <h1 className="text-[2rem] text-white mb-4">CekFilm</h1>
 
       <div className="flex gap-x-4 flex-col md:flex-row gap-y-2">
@@ -15,6 +22,7 @@ const SearchBar = ({ searchQuery, setSearchQuery, onSearchButtonClick }) => {
           id="search"
           value={searchQuery}
           onChange={({ target }) => setSearchQuery(target.value)}
+          onKeyDown={handleKeyDown} // Call handleKeyDown on key down
         />
 
         <Button buttonText="Search" onClick={onSearchButtonClick} />
@@ -23,4 +31,4 @@ const SearchBar = ({ searchQuery, setSearchQuery, onSearchButtonClick }) => {
   );
 };
 
-export default SearchBar
+export default SearchBar;

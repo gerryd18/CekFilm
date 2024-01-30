@@ -9,9 +9,9 @@ const PopularMovieList = ({ popularMovies }) => {
         <Link to={`/detail?movie=${movie.id}`} key={movie.id}>
           <div
             key={i}
-            className="bg-slate-200 p-3 mx-auto mb-2rem rounded-xl w-[20rem] lg:w-[20rem] h-[600px]"
+            className="bg-slate-200 p-3 mx-auto mb-2rem rounded-3xl w-[20rem] lg:w-[20rem] h-[600px]"
           >
-            <div className="w-full mb-5 text-xl text-center">{movie.title}</div>
+            <div className="w-full mb-5 text-md text-center">{movie.title}</div>
             <img
               className="w-full"
               src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
