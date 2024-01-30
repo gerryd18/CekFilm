@@ -8,7 +8,7 @@ export const getMovieList = async()=>{
       `${baseUrl}/movie/popular?include_adult=true&include_video=true&page=1&api_key=${apiKey}`
     );
     // console.log({movieList : movie});
-    return movie.data.results
+    return movie.data.results;
 }
 
 export const nowPlayingMovie = async () => {
