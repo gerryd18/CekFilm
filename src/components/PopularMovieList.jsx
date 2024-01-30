@@ -6,7 +6,7 @@ const PopularMovieList = ({ popularMovies }) => {
   return (
     <>
       {popularMovies.map((movie, i) => (
-        <Link to={`/detail?movie=${movie.id}`}>
+        <Link to={`/detail?movie=${movie.id}`} key={movie.id}>
           <div
             key={i}
             className="bg-slate-200 p-3 mx-auto mb-2rem rounded-xl w-[20rem] lg:w-[20rem] h-[600px]"
