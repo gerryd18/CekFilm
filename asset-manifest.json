@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.765dea44.css",
-    "main.js": "/static/js/main.ca0ea7bd.js",
-    "static/js/787.7d855c5d.chunk.js": "/static/js/787.7d855c5d.chunk.js",
-    "index.html": "/index.html",
-    "main.765dea44.css.map": "/static/css/main.765dea44.css.map",
-    "main.ca0ea7bd.js.map": "/static/js/main.ca0ea7bd.js.map",
-    "787.7d855c5d.chunk.js.map": "/static/js/787.7d855c5d.chunk.js.map"
+    "main.css": "/CekFilm/static/css/main.765dea44.css",
+    "main.js": "/CekFilm/static/js/main.62b10b56.js",
+    "static/js/787.7d855c5d.chunk.js": "/CekFilm/static/js/787.7d855c5d.chunk.js",
+    "index.html": "/CekFilm/index.html",
+    "main.765dea44.css.map": "/CekFilm/static/css/main.765dea44.css.map",
+    "main.62b10b56.js.map": "/CekFilm/static/js/main.62b10b56.js.map",
+    "787.7d855c5d.chunk.js.map": "/CekFilm/static/js/787.7d855c5d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.765dea44.css",
-    "static/js/main.ca0ea7bd.js"
+    "static/js/main.62b10b56.js"
   ]
 }
