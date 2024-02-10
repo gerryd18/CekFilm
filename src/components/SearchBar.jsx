@@ -10,8 +10,10 @@ const SearchBar = ({ searchQuery, setSearchQuery, onSearchButtonClick }) => {
   };
 
   return (
-    <div className="container mx-auto mb-12 flex flex-col items-center justify-center gap-y-2 py-[2rem]">
-      <h1 className="text-[2rem] text-white mb-4">CekFilm</h1>
+    <div className="container  mx-auto mb-12 flex flex-col items-center justify-center gap-y-2 py-[2rem]">
+      <div className="w-full flex items-center h-[20vh] justify-center">
+        <h1 className="text-5xl text-white mb-4 tracking-wide">CekFilm</h1>
+      </div>
 
       <div className="flex gap-x-4 flex-col md:flex-row gap-y-2">
         <input
